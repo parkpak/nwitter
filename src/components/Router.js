@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Auth from "../routes/Auth";
 import Home from "../routes/Home";
 import Navigation from "./Navigation";
@@ -7,7 +7,7 @@ import Profile from "../routes/Profile";
 
 export default function Router({ isLoggedIn, userObj }) {
     return (
-        <HashRouter>
+        <BrowserRouter>
             {isLoggedIn && <Navigation />}
             <Routes>
                 {isLoggedIn
@@ -25,6 +25,6 @@ export default function Router({ isLoggedIn, userObj }) {
                     )
                 }
             </Routes>
-        </HashRouter>
+        </BrowserRouter>
     )
 }
